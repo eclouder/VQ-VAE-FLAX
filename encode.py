@@ -32,7 +32,7 @@ if __name__ == '__main__':
     key = jax.random.PRNGKey(0)
 
     # Input tensor has shape (32, 3, 256, 256)
-    random_tensor = jax.random.normal(key, (32, 3, 256, 256))
+    random_tensor = jax.random.normal(key, (32, 256, 256, 3))
     y = test_model(random_tensor)
 
     print(y.shape)
